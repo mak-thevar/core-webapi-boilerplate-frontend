@@ -1,6 +1,11 @@
 {
-  "name": "todoapp",
-  "version": "0.0.0",
+  "name": "core-webapi-boilerplate-frontend",
+  "version": "1.0.0",
+  "author": {
+    "name": "Muthukumar",
+    "email": "mak.thevar@outlook.com"
+  },
+  "description": "Angular frontend for https://github.com/mak-thevar/core-webapi-boilerplate",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

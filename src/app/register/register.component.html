@@ -1,0 +1,108 @@
+<div class="register-page">
+  <div class="register-box">
+    <div class="register-logo">
+      <a href="../../index2.html"><b>Todo</b>App</a>
+    </div>
+
+    <div class="card">
+      <div class="card-body register-card-body">
+        <small>
+          <div *ngFor="let e of localErrors" class="alert alert-danger" role="alert">
+            {{e}}
+          </div>
+        </small>
+        <p class="login-box-msg">Register a new membership</p>
+        <form [formGroup]="registerForm" (ngSubmit)="registerUser()">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" formControlName="name" placeholder="Full name">
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-user"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" formControlName="userName" placeholder="Unique username">
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-user"></span>
+              </div>
+            </div>
+          </div>
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" formControlName="emailId" placeholder="Email">
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-envelope"></span>
+              </div>
+            </div>
+          </div>
+          <div class="input-group mb-3">
+            <input type="password" class="form-control" formControlName="password" placeholder="Password">
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-lock"></span>
+              </div>
+            </div>
+          </div>
+          <div class="input-group mb-3">
+            <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Retype password">
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-lock"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+
+
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </div>
+
+          </div>
+        </form>
+        <!-- <main class="form-signin w-100 m-auto">
+    <form [formGroup]="registerForm" (ngSubmit)="registerUser()">
+      
+      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+  
+
+      <div class="form-floating">
+        <input type="text" class="form-control" formControlName="name"  id="name" placeholder="Raju Sharma">
+        <label for="floatingInput">Full Name</label>
+      </div>
+
+      <div class="form-floating">
+        <input type="text" class="form-control" id="username" formControlName="userName" placeholder="A Unique Username">
+        <label for="floatingInput">Username</label>
+      </div>
+
+      <div class="form-floating">
+        <input type="email" class="form-control" formControlName="emailId" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" formControlName="password" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="confirmPassword" formControlName="confirmPassword" placeholder="Confirm Password">
+        <label for="floatingPassword">Confirm Password</label>
+      </div>
+  
+      <div class="form-check text-start my-3">
+        <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Remember me
+        </label>
+      </div>
+      <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
+    </form>
+  </main> -->
+      </div>
+    </div>
+  </div>
+</div>

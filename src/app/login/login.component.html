@@ -1,0 +1,47 @@
+<div class="register-page">
+    <div class="register-box">
+      <div class="register-logo">
+        <a href="../../index2.html"><b>Todo</b>App</a>
+      </div>
+    
+      <div class="card">
+        <div class="card-body register-card-body">
+          <p class="login-box-msg">Register a new membership</p>
+          <div *ngIf="errorMessage" class="alert alert-danger">
+            {{ errorMessage }}
+          </div>
+          <form [formGroup]="loginForm" (ngSubmit)="login()">
+           
+    
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" formControlName="userName" placeholder="Username">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-user"></span>
+                  </div>
+                </div>
+              </div>
+           
+            <div class="input-group mb-3">
+              <input type="password" class="form-control" formControlName="password" placeholder="Password">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-lock"></span>
+                </div>
+              </div>
+            </div>
+          
+            <div class="row">
+             
+    
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+              </div>
+    
+            </div>
+          </form>
+      
+        </div>
+      </div>
+    </div>
+    </div>  

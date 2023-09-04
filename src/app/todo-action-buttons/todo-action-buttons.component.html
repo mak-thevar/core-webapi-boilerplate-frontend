@@ -1,0 +1,5 @@
+<button class="btn btn-success" [disabled]="localTodo.isEditMode">Completed</button>
+&nbsp;
+<button (click)="callEditMethod(localTodo)" class="btn btn-primary">{{localTodo.isEditMode? "Done": "Edit"}}</button>
+&nbsp;
+<button href="#" class="btn btn-danger" [disabled]="localTodo.isEditMode">Delete</button>

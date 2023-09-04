@@ -1,0 +1,18 @@
+<div class="card" [ngClass]="{'shadow-lg': t.isEditMode}" *ngFor="let t of todos;  let i = index">
+    <div class="card-header">
+      <h5 class="m-0" [contentEditable]="t.isEditMode">{{t.title}}</h5>
+      
+    </div>
+    <div class="card-body">
+
+      <!-- <input [(ngModel)]="t.description" [name]="'name-' + t.id" />
+      <p class="card-text" [contentEditable]="true"> {{ t.description }}</p> -->
+      <textarea aria-multiline="false" *ngIf="t.isEditMode" class="form-control mb-3" [(ngModel)]="t.description"></textarea>
+
+      <p *ngIf="!t.isEditMode" style="white-space: pre-line;" (input)="onContentChange($event, i)" class="card-text" [contentEditable]="t.isEditMode">
+        {{t.description}}
+      </p>
+
+    <app-todo-action-buttons [localTodo]="t" (callEdit)="edit($event)"></app-todo-action-buttons>
+    </div>
+  </div>
