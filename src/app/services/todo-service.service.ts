@@ -19,4 +19,8 @@ export class TodoServiceService {
   getTodo(): Observable<any>{
     return this.http.get(`${this.baseEndPoint}/todos`);
   }
+
+  addTodo(todo:TodoRequestModel){
+    return this.http.post(`${this.baseEndPoint}/todos`,todo);
+  }
 }

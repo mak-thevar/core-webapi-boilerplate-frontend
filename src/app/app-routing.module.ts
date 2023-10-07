@@ -4,11 +4,13 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './services/auth.guard';
+import { TodoAddComponent } from './todo-add/todo-add.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'login', pathMatch: 'full'},
   {path:'login', component: LoginComponent},
   {path:'register', component: RegisterComponent},
+  {path:'add-todo', component: TodoAddComponent},
   {path:'home', component: HomeComponent, canActivate: [AuthGuard]}
 ];
 

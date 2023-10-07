@@ -1,3 +1,4 @@
 <app-homelayout [pageTitle]="viewTitle">
+    <h1 *ngIf="this.todos.length==0">0 Todos at the moment. Please try adding some todo's</h1>
     <app-todo-list [todos]="todos"></app-todo-list>
 </app-homelayout>

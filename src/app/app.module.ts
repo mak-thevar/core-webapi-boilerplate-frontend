@@ -15,6 +15,7 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { HomelayoutComponent } from './homelayout/homelayout.component';
 import { TodoActionButtonsComponent } from './todo-action-buttons/todo-action-buttons.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { TodoAddComponent } from './todo-add/todo-add.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     FooterComponent,
     TodoListComponent,
     HomelayoutComponent,
-    TodoActionButtonsComponent
+    TodoActionButtonsComponent,
+    TodoAddComponent
   ],
   imports: [
     BrowserModule,
