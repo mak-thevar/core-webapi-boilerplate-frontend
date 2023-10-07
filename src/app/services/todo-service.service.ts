@@ -23,4 +23,7 @@ export class TodoServiceService {
   addTodo(todo:TodoRequestModel){
     return this.http.post(`${this.baseEndPoint}/todos`,todo);
   }
+  completeTodo(todoId: number){
+    return this.http.post(`${this.baseEndPoint}/todos/completed/${todoId}`,null);
+  }
 }

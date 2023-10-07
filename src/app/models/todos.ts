@@ -3,4 +3,5 @@ export class Todos {
     title?:String;
     description?:String;
     isEditMode?:boolean;
+    todoStatus?:String;
 }

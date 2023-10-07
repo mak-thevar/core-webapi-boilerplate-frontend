@@ -25,7 +25,8 @@ export class HomeComponent {
               id: element.id,
               description : element.description,
               title: element.title,
-              isEditMode: false
+              isEditMode: false,
+              todoStatus: element.todoStatus
             }
             this.todos.push(mappedResp);
         }

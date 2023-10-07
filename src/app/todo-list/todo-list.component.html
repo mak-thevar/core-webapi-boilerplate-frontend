@@ -1,7 +1,7 @@
-<div class="card" [ngClass]="{'shadow-lg': t.isEditMode}" *ngFor="let t of todos;  let i = index">
+<div class="card" [ngClass]="{'shadow-lg': t.isEditMode, 'completed': (t.todoStatus == 'Completed')}" *ngFor="let t of todos;  let i = index">
     <div class="card-header">
       <h5 class="m-0" [contentEditable]="t.isEditMode">{{t.title}}</h5>
-      
+      <span *ngIf="t.todoStatus=='Completed'" class="badge bg-info">COMPLETED</span>
     </div>
     <div class="card-body">
 
@@ -13,6 +13,6 @@
         {{t.description}}
       </p>
 
-    <app-todo-action-buttons [localTodo]="t" (callEdit)="edit($event)"></app-todo-action-buttons>
+    <app-todo-action-buttons [localTodo]="t" (callEdit)="edit($event)" (callCompleted)="complete($event)"></app-todo-action-buttons>
     </div>
   </div>

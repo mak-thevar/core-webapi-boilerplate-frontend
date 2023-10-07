@@ -37,4 +37,11 @@ export class TodoListComponent {
       })
     }
   }
+  complete(todoId:number|undefined){
+    this.todoService.completeTodo(todoId??0).subscribe({
+      next: v=>{
+        console.log(v);
+      }
+    })
+  }
 }

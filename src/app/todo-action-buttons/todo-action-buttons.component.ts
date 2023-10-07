@@ -9,12 +9,16 @@ import { Todos } from '../models/todos';
 export class TodoActionButtonsComponent {
   @Output() callEdit: EventEmitter<Todos> = new EventEmitter();
   @Output() callUpdate: EventEmitter<Todos> = new EventEmitter();
+  @Output() callCompleted: EventEmitter<number> = new EventEmitter();
 
   @Input() localTodo:Todos = {};
 
 
   callEditMethod(todo:Todos){
     this.callEdit.emit(todo);
+  }
+  callCompletedMethod(todoId:number|undefined){
+    this.callCompleted.emit(todoId);
   }
 
 }
